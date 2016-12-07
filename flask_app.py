@@ -9,3 +9,7 @@ app = Flask(__name__)
 def hello_world():
     return 'Greetings!'
 
+@app.route('/about')
+def about():
+    return "This is my non-existent 'about' page"
+
