@@ -4,7 +4,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <title>Sand&amp;Pressure</title>
+        <title>Coal Under Pressure</title>
     </head>
     <body>
 
@@ -17,25 +17,18 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="https://opeker.pythonanywhere.com/">Sand&amp;Pressure</a>
+            <a class="navbar-brand" href="https://opeker.pythonanywhere.com/">Coal Under Pressure</a>
           </div>
         </div>
       </nav>
 
       <div class="container">
 
-        <div>
-            This is the first dummy comment.
-        </div>
-
-        <div>
-            This is the the second dummy comment.  It's no more interesting
-            than the first.
-        </div>
-
-        <div>
-            This is the third dummy comment.  It's actually quite exciting!
-        </div>
+        {% for comment in comments %}
+            <div class="row">
+                {{ comment }}
+            </div>
+        {% endfor %}
 
         <div>
             <form action="." method="POST">
